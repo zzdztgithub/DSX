@@ -1,0 +1,147 @@
+<PMML version="4.3" xmlns="http://www.dmg.org/PMML-4_3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_3 http://www.dmg.org/pmml/v4-3/pmml-4-3.xsd">
+ <Header copyright="Copyright (c) 2018 dsxuser" description="Generalized Linear Regression Model">
+  <Extension name="user" value="dsxuser" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2018-09-17 09:26:44</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="21">
+  <DataField name="RESPONSE" optype="continuous" dataType="double"/>
+  <DataField name="H_1" optype="continuous" dataType="double"/>
+  <DataField name="H_2" optype="continuous" dataType="double"/>
+  <DataField name="M_1" optype="continuous" dataType="double"/>
+  <DataField name="N_1" optype="continuous" dataType="double"/>
+  <DataField name="O_1" optype="continuous" dataType="double"/>
+  <DataField name="X_1" optype="continuous" dataType="double"/>
+  <DataField name="JJ_1" optype="continuous" dataType="double"/>
+  <DataField name="ZZ_1" optype="continuous" dataType="double"/>
+  <DataField name="ZZ_2" optype="continuous" dataType="double"/>
+  <DataField name="AAA_1" optype="continuous" dataType="double"/>
+  <DataField name="AAA_2" optype="continuous" dataType="double"/>
+  <DataField name="DDDD_7" optype="continuous" dataType="double"/>
+  <DataField name="FFFF" optype="continuous" dataType="double"/>
+  <DataField name="HHHH_2" optype="continuous" dataType="double"/>
+  <DataField name="HHHH_5" optype="continuous" dataType="double"/>
+  <DataField name="CCCCC_1" optype="continuous" dataType="double"/>
+  <DataField name="DDDDD_1" optype="continuous" dataType="double"/>
+  <DataField name="S." optype="continuous" dataType="double"/>
+  <DataField name="Y." optype="continuous" dataType="double"/>
+  <DataField name="FF." optype="continuous" dataType="double"/>
+ </DataDictionary>
+ <GeneralRegressionModel modelName="General_Regression_Model" modelType="generalizedLinear" functionName="regression" algorithmName="glm" distribution="binomial" linkFunction="logit">
+  <MiningSchema>
+   <MiningField name="RESPONSE" usageType="predicted" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="H_1" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="H_2" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="M_1" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="N_1" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="O_1" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="X_1" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="JJ_1" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="ZZ_1" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="ZZ_2" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="AAA_1" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="AAA_2" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="DDDD_7" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="FFFF" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="HHHH_2" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="HHHH_5" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="CCCCC_1" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="DDDDD_1" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="S." usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="Y." usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="FF." usageType="active" invalidValueTreatment="returnInvalid"/>
+  </MiningSchema>
+  <Output>
+   <OutputField name="Predicted_RESPONSE" feature="predictedValue" optype="continuous" dataType="double"/>
+  </Output>
+  <ParameterList>
+   <Parameter name="p0" label="(Intercept)"/>
+   <Parameter name="p1" label="H_1"/>
+   <Parameter name="p2" label="H_2"/>
+   <Parameter name="p3" label="M_1"/>
+   <Parameter name="p4" label="N_1"/>
+   <Parameter name="p5" label="O_1"/>
+   <Parameter name="p6" label="X_1"/>
+   <Parameter name="p7" label="JJ_1"/>
+   <Parameter name="p8" label="ZZ_1"/>
+   <Parameter name="p9" label="ZZ_2"/>
+   <Parameter name="p10" label="AAA_1"/>
+   <Parameter name="p11" label="AAA_2"/>
+   <Parameter name="p12" label="DDDD_7"/>
+   <Parameter name="p13" label="FFFF"/>
+   <Parameter name="p14" label="HHHH_2"/>
+   <Parameter name="p15" label="HHHH_5"/>
+   <Parameter name="p16" label="CCCCC_1"/>
+   <Parameter name="p17" label="DDDDD_1"/>
+   <Parameter name="p18" label="S."/>
+   <Parameter name="p19" label="Y."/>
+   <Parameter name="p20" label="FF."/>
+  </ParameterList>
+  <FactorList/>
+  <CovariateList>
+   <Predictor name="H_1"/>
+   <Predictor name="H_2"/>
+   <Predictor name="M_1"/>
+   <Predictor name="N_1"/>
+   <Predictor name="O_1"/>
+   <Predictor name="X_1"/>
+   <Predictor name="JJ_1"/>
+   <Predictor name="ZZ_1"/>
+   <Predictor name="ZZ_2"/>
+   <Predictor name="AAA_1"/>
+   <Predictor name="AAA_2"/>
+   <Predictor name="DDDD_7"/>
+   <Predictor name="FFFF"/>
+   <Predictor name="HHHH_2"/>
+   <Predictor name="HHHH_5"/>
+   <Predictor name="CCCCC_1"/>
+   <Predictor name="DDDDD_1"/>
+   <Predictor name="S."/>
+   <Predictor name="Y."/>
+   <Predictor name="FF."/>
+  </CovariateList>
+  <PPMatrix>
+   <PPCell value="1" predictorName="H_1" parameterName="p1"/>
+   <PPCell value="1" predictorName="H_2" parameterName="p2"/>
+   <PPCell value="1" predictorName="M_1" parameterName="p3"/>
+   <PPCell value="1" predictorName="N_1" parameterName="p4"/>
+   <PPCell value="1" predictorName="O_1" parameterName="p5"/>
+   <PPCell value="1" predictorName="X_1" parameterName="p6"/>
+   <PPCell value="1" predictorName="JJ_1" parameterName="p7"/>
+   <PPCell value="1" predictorName="ZZ_1" parameterName="p8"/>
+   <PPCell value="1" predictorName="ZZ_2" parameterName="p9"/>
+   <PPCell value="1" predictorName="AAA_1" parameterName="p10"/>
+   <PPCell value="1" predictorName="AAA_2" parameterName="p11"/>
+   <PPCell value="1" predictorName="DDDD_7" parameterName="p12"/>
+   <PPCell value="1" predictorName="FFFF" parameterName="p13"/>
+   <PPCell value="1" predictorName="HHHH_2" parameterName="p14"/>
+   <PPCell value="1" predictorName="HHHH_5" parameterName="p15"/>
+   <PPCell value="1" predictorName="CCCCC_1" parameterName="p16"/>
+   <PPCell value="1" predictorName="DDDDD_1" parameterName="p17"/>
+   <PPCell value="1" predictorName="S." parameterName="p18"/>
+   <PPCell value="1" predictorName="Y." parameterName="p19"/>
+   <PPCell value="1" predictorName="FF." parameterName="p20"/>
+  </PPMatrix>
+  <ParamMatrix>
+   <PCell parameterName="p0" df="1" beta="-4609808615676.7"/>
+   <PCell parameterName="p1" df="1" beta="1.09725521055554"/>
+   <PCell parameterName="p3" df="1" beta="1.22684081556753"/>
+   <PCell parameterName="p4" df="1" beta="0.197651914342246"/>
+   <PCell parameterName="p5" df="1" beta="-0.78060823336431"/>
+   <PCell parameterName="p6" df="1" beta="0.226290293307697"/>
+   <PCell parameterName="p7" df="1" beta="0.480703791902523"/>
+   <PCell parameterName="p8" df="1" beta="4609808615652.98"/>
+   <PCell parameterName="p9" df="1" beta="4609808615626.34"/>
+   <PCell parameterName="p10" df="1" beta="19.4257580205501"/>
+   <PCell parameterName="p12" df="1" beta="-0.0129482753104426"/>
+   <PCell parameterName="p13" df="1" beta="0.00809581633123861"/>
+   <PCell parameterName="p14" df="1" beta="0.873929513889243"/>
+   <PCell parameterName="p15" df="1" beta="0.553031401543166"/>
+   <PCell parameterName="p16" df="1" beta="-0.831079825167081"/>
+   <PCell parameterName="p17" df="1" beta="0.275469530620666"/>
+   <PCell parameterName="p18" df="1" beta="0.664880928196802"/>
+   <PCell parameterName="p19" df="1" beta="-0.124950250362165"/>
+   <PCell parameterName="p20" df="1" beta="-1.05282747928426"/>
+  </ParamMatrix>
+ </GeneralRegressionModel>
+</PMML>
